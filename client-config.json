@@ -6,7 +6,8 @@
     "groomParents": "S/o: S Venkatraman & V Savithri",
     "bride": "Harini",
     "brideParents": "D/o: R Ganesan & G Rajeswari",
-    "photo": "./assets/couple-portrait.jpg"
+    "photo": "./assets/couple-portrait.jpg",
+    "ogImage": "./assets/og-image.jpg"
   },
   "headerInvocation": "|| Shree Ganeshay Namah ||",
   "greetingSubtitle": "WE INVITE YOU TO CELEBRATE THE WEDDING OF",
