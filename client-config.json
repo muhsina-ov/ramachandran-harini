@@ -1,0 +1,50 @@
+{
+  "doorStyleId": "2",
+  "theme": "champagne",
+  "couple": {
+    "groom": "Ramachandran",
+    "groomParents": "S/o: S Venkatraman & V Savithri",
+    "bride": "Harini",
+    "brideParents": "D/o: R Ganesan & G Rajeswari",
+    "photo": "./assets/couple-portrait.jpg"
+  },
+  "headerInvocation": "|| Shree Ganeshay Namah ||",
+  "greetingSubtitle": "WE INVITE YOU TO CELEBRATE THE WEDDING OF",
+  "event": {
+    "dateNum": "01",
+    "month": "NOVEMBER",
+    "year": "2026",
+    "dayOfWeek": "SUNDAY",
+    "time": "MUHURTHAM: 9:00 AM - 10:30 AM",
+    "venueName": "Sri Ganesh Mahal",
+    "locationAddress": "Kalapet Pondicherry",
+    "mapUrl": "https://share.google/KcolNOLQ2Bt5SUqbb"
+  },
+  "itinerary": [
+    {
+      "date": "31.10.2026",
+      "day": "Saturday",
+      "time": "10:30 AM - 11:30 AM",
+      "title": "Nichayathartham",
+      "desc": "Auspicious Engagement Ceremony"
+    },
+    {
+      "date": "31.10.2026",
+      "day": "Saturday",
+      "time": "6:30 PM Onwards",
+      "title": "Reception",
+      "desc": "Grand Reception & Dinner"
+    },
+    {
+      "date": "01.11.2026",
+      "day": "Sunday",
+      "time": "9:00 AM - 10:30 AM",
+      "title": "Muhurtham",
+      "desc": "Sacred Wedding Rituals at Sri Ganesh Mahal, Kalapet"
+    }
+  ],
+  "media": {
+    "audioTrackId": "custom",
+    "audioFile": "./assets/bgm.mp3"
+  }
+}

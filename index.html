@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Wedding Invitation | Ramachandran &amp; Harini</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&amp;family=Cinzel+Decorative:wght@400;600;700;900&amp;family=Cinzel:wght@400;500;600;700;800&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Montserrat:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  
+  <!-- Performance Preload & Resource Hints -->
+  <link rel="preload" as="image" id="preloadPoster" href="./assets/doors/2.png" fetchpriority="high">
+  <link rel="preload" as="video" id="preloadVideo" href="./assets/doors/2.mp4" type="video/mp4">
+  <script type="module" src="./main.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-door-id="2" class="client-mode deliverable-mode">
+  <!-- Ambient Desktop Background -->
+  <div class="ambient-backdrop" id="ambientBackdrop"></div>
+
+  <!-- Top Floating Controls -->
+  <header class="top-controls">
+    <div class="action-pills">
+      <button id="audioToggleBtn" class="glass-pill-btn icon-only" title="Toggle Sound">
+        <svg id="audioIconOn" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        <svg id="audioIconOff" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main 9:16 Vertical Invitation Container -->
+  <main class="invitation-wrapper">
+    <div class="invitation-card-container" id="invitationContainer">
+      
+      <!-- Video & Image Layers (Pure Architecture, NO text overlaid on video) -->
+      <div class="media-stage" id="mediaStage">
+        <!-- High-res Static Poster Image for instant load -->
+        <img id="doorPoster" src="./assets/doors/2.png" alt="Architectural Door Cover" class="door-media poster-image active" decoding="async" fetchpriority="high">
+        
+        <!-- Video Layer for physical opening animation -->
+        <video id="doorVideo" class="door-media video-player" playsinline="" webkit-playsinline="" preload="auto" muted="" poster="./assets/doors/2.png" src="./assets/doors/2.mp4">
+          <source id="videoSource" src="./assets/doors/2.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Freeze Frame Canvas for 100% static hold at video completion -->
+        <canvas id="staticFrameCanvas" class="door-media static-canvas"></canvas>
+
+        <!-- Top Invocation Badge during Door opens -->
+        <div class="door-top-invocation" id="doorTopInvocation">
+          <span class="invoc-symbol">॥</span> Shree Ganeshay Namah <span class="invoc-symbol">॥</span>
+        </div>
+
+        <!-- Ambient Dust / Light Particle Overlay -->
+        <div class="light-dust-particles" id="dustParticles"></div>
+
+        <!-- 3D Depth Floating Sky Lanterns Overlay -->
+        <div class="floating-lanterns-container" id="lanternsContainer"></div>
+
+        <!-- Tap-To-Open Callout (Disappears immediately on click/tap) -->
+        <div class="tap-to-open-overlay" id="tapOverlay">
+          <div class="keyhole-pulse">
+            <div class="ring-pulse"></div>
+            <div class="keyhole-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"></circle><path d="M12 13v5M9.5 21h5"></path></svg>
+            </div>
+          </div>
+          <span class="tap-text">TAP TO OPEN</span>
+          <span class="sub-tap-text">An Auspicious Invitation Awaits</span>
+        </div>
+      </div>
+
+      <!-- Wedding Content Overlay (Reveals AFTER door opens and freezes) -->
+      <div class="invitation-overlay hidden" id="invitationOverlay">
+        
+        <!-- Celebration Confetti Particle Layer -->
+        <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+        <div class="content-scrollable" id="contentScrollable">
+          
+          <!-- Invocation / Header Symbol -->
+          <div class="invitation-header animate-element" style="--delay: 0.1s;">
+            <div class="header-calligraphy" id="displayBismillah">|| Shree Ganeshay Namah ||</div>
+            <div class="header-divider">
+              <span class="line"></span>
+              <span class="diamond">◆</span>
+              <span class="line"></span>
+            </div>
+          </div>
+
+          <!-- Families & Greeting -->
+          <p class="greeting-text animate-element" style="--delay: 0.2s;" id="displayGreeting">WE INVITE YOU TO CELEBRATE THE WEDDING OF</p>
+
+          <!-- Groom & Bride Names -->
+          <div class="couple-names-block animate-element" style="--delay: 0.35s;">
+            <h1 class="groom-name" id="displayGroom">Ramachandran</h1>
+            <p class="parent-info">(S/o: S Venkatraman &amp; V Savithri)</p>
+            <div class="ampersand-wrapper">
+              <span class="ampersand">&amp;</span>
+            </div>
+            <h1 class="bride-name" id="displayBride">Harini</h1>
+            <p class="parent-info">(D/o: R Ganesan &amp; G Rajeswari)</p>
+          </div>
+
+          <!-- Announcement -->
+          <p class="invitation-tagline animate-element" style="--delay: 0.5s;" id="displayTagline">
+            REQUEST THE HONOR OF YOUR PRESENCE AT THE AUSPICIOUS OCCASION OF THEIR WEDDING CEREMONY
+          </p>
+
+          <div class="gold-separator animate-element" style="--delay: 0.6s;"></div>
+
+          <!-- Interactive Scratch-to-Reveal Date Card -->
+          <div class="scratch-card-wrapper animate-element" style="--delay: 0.7s;">
+            <div class="scratch-card-container" id="scratchContainer">
+              <!-- Underneath Date Card -->
+              <div class="date-time-card" id="dateTimeCard">
+                <div class="date-day" id="displayDay">SUNDAY</div>
+                <div class="date-main">
+                  <span class="date-month" id="displayMonth">NOVEMBER</span>
+                  <span class="date-num" id="displayDateNum">01</span>
+                  <span class="date-year" id="displayYear">2026</span>
+                </div>
+                <div class="date-time" id="displayTime">MUHURTHAM: 9:00 AM - 10:30 AM</div>
+              </div>
+              
+              <!-- Gold Scratch Foil Canvas -->
+              <canvas id="scratchCanvas" class="scratch-canvas"></canvas>
+              
+              <!-- Scratch Hint Badge -->
+              <div class="scratch-hint-badge" id="scratchHint">
+                <span class="sparkle-icon">✨</span>
+                <span>Scratch foil to reveal date</span>
+              </div>
+            </div>
+
+            <button id="quickRevealBtn" class="quick-reveal-btn">
+              <span>Quick Reveal Date ✨</span>
+            </button>
+          </div>
+
+          <!-- Live Countdown Row -->
+          <div class="countdown-section animate-element" style="--delay: 0.8s;">
+            <div class="countdown-grid" id="countdownGrid">
+              <div class="countdown-pill">
+                <span class="countdown-num" id="cdDays">00</span>
+                <span class="countdown-unit">DAYS</span>
+              </div>
+              <div class="countdown-pill">
+                <span class="countdown-num" id="cdHours">00</span>
+                <span class="countdown-unit">HOURS</span>
+              </div>
+              <div class="countdown-pill">
+                <span class="countdown-num" id="cdMins">00</span>
+                <span class="countdown-unit">MINS</span>
+              </div>
+              <div class="countdown-pill">
+                <span class="countdown-num" id="cdSecs">00</span>
+                <span class="countdown-unit">SECS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Venue & Location Block -->
+          <div class="venue-block animate-element" style="--delay: 0.9s;">
+            <h3 class="venue-name" id="displayVenue">Sri Ganesh Mahal</h3>
+            <p class="venue-location" id="displayLocation">Kalapet Pondicherry</p>
+          </div>
+
+          <!-- Event Itinerary Timeline Section -->
+          <div class="itinerary-section animate-element" style="--delay: 1.0s;">
+            <div class="section-title">EVENT ITINERARY</div>
+            <div class="timeline-wrapper">
+              <div class="timeline-item">
+                <div class="timeline-time">10:30 AM<br><span class="timeline-subtime">- 11:30 AM</span></div>
+                <div class="timeline-dot">◆</div>
+                <div class="timeline-content">
+                  <div class="timeline-date-badge">31.10.2026 • Saturday</div>
+                  <h4>Nichayathartham</h4>
+                  <p>Auspicious Engagement Ceremony</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-time">6:30 PM<br><span class="timeline-subtime">Onwards</span></div>
+                <div class="timeline-dot">◆</div>
+                <div class="timeline-content">
+                  <div class="timeline-date-badge">31.10.2026 • Saturday</div>
+                  <h4>Reception</h4>
+                  <p>Evening Celebrations &amp; Festive Dinner</p>
+                </div>
+              </div>
+              <div class="timeline-item highlight-muhurtham">
+                <div class="timeline-time">9:00 AM<br><span class="timeline-subtime">- 10:30 AM</span></div>
+                <div class="timeline-dot">◆</div>
+                <div class="timeline-content">
+                  <div class="timeline-date-badge muhurtham-badge">01.11.2026 • Sunday</div>
+                  <h4>Muhurtham</h4>
+                  <p>Sri Ganesh Mahal, Kalapet Pondicherry</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Couple Portrait Section (Below Event Itinerary) -->
+          <div class="couple-photo-section animate-element" style="--delay: 1.05s;">
+            <div class="couple-photo-frame">
+              <img src="./assets/couple-portrait.jpg" alt="Ramachandran &amp; Harini" class="couple-portrait-img" loading="lazy">
+              <div class="photo-caption-overlay">
+                <span class="photo-caption-names">Ramachandran &amp; Harini</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verse / Quote Section -->
+          <div class="quote-section animate-element" style="--delay: 1.1s;">
+            <p class="story-quote">
+              “Two souls united in love and tradition, beginning a beautiful journey of togetherness and sacred bliss.”
+            </p>
+            <span class="story-ref">— A Celebration of Love</span>
+          </div>
+
+          <!-- Action Buttons Grid -->
+          <div class="action-buttons-grid animate-element" style="--delay: 1.2s;">
+            <button class="primary-gold-btn" id="addToCalendarBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Add to Calendar</span>
+            </button>
+
+            <a href="https://share.google/KcolNOLQ2Bt5SUqbb" target="_blank" rel="noopener noreferrer" class="secondary-glass-btn map-btn-link" id="openMapBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Location</span>
+            </a>
+          </div>
+
+          <!-- Replay Footer -->
+          <div class="invitation-footer animate-element" style="--delay: 1.25s;">
+            <button id="replayBtn" class="text-link-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"></path><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+              Replay Door Opening
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Venue Location Map Modal -->
+  <div class="modal-backdrop hidden" id="mapModal">
+    <div class="modal-card map-card">
+      <div class="modal-header">
+        <h2>Venue Location</h2>
+        <button class="close-modal-btn" id="closeMapModal">×</button>
+      </div>
+      <div class="map-body">
+        <div class="location-details">
+          <h3 id="mapVenueTitle">Sri Ganesh Mahal</h3>
+          <p id="mapVenueAddress">Kalapet Pondicherry</p>
+        </div>
+        <div class="map-mockup">
+          <div class="map-grid-pattern"></div>
+          <div class="map-pin">
+            <div class="pin-pulse"></div>
+            <div class="pin-head">🛕</div>
+          </div>
+          <span class="map-label">Sri Ganesh Mahal, Kalapet</span>
+        </div>
+        <a href="https://share.google/KcolNOLQ2Bt5SUqbb" target="_blank" rel="noopener noreferrer" class="primary-gold-btn full-width text-center">
+          Open in Google Maps ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body></html>
