@@ -30,33 +30,16 @@
 .photo-caption-overlay{position:absolute;bottom:4px;left:4px;right:4px;padding:22px 14px 10px;background:linear-gradient(180deg,transparent 0%,rgba(8,8,12,.88) 85%);border-radius:0 0 16px 16px;text-align:center;pointer-events:none}
 .photo-caption-names{font-family:var(--font-heading);font-size:1.05rem;letter-spacing:2px;color:var(--color-gold-light);text-shadow:0 2px 10px rgba(0,0,0,.9);font-weight:600}
 
-/* Bespoke Royal Architectural Date Crest */
-.scratch-card-container{position:relative;width:100%;background:radial-gradient(circle at 50% 35%,rgba(229,193,88,.12) 0%,rgba(18,18,24,.92) 75%);backdrop-filter:blur(16px);border:1px solid rgba(229,193,88,.35);border-radius:20px;overflow:hidden;box-shadow:0 12px 35px rgba(0,0,0,.7),0 0 30px rgba(229,193,88,.12),inset 0 0 25px rgba(229,193,88,.06);user-select:none;-webkit-user-select:none}
-.scratch-card-container::before{content:"";position:absolute;inset:4px;border:1px dashed rgba(229,193,88,.2);border-radius:16px;pointer-events:none}
-.card-corner{position:absolute;font-size:.6rem;color:var(--color-gold);opacity:.6;pointer-events:none;line-height:1;z-index:1}
-.corner-tl{top:8px;left:10px}
-.corner-tr{top:8px;right:10px}
-.corner-bl{bottom:8px;left:10px}
-.corner-br{bottom:8px;right:10px}
-.date-time-card{background:transparent;border:none;padding:20px 16px 18px;width:100%;text-align:center;position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;box-sizing:border-box}
-.date-day-row{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:240px;margin-bottom:10px}
-.day-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(229,193,88,.45))}
-.day-line.right{background:linear-gradient(90deg,rgba(229,193,88,.45),transparent)}
-.date-day{font-family:var(--font-serif);font-size:.76rem;letter-spacing:3.5px;color:var(--color-gold);font-weight:600;text-transform:uppercase;text-shadow:0 0 10px rgba(229,193,88,.3)}
-.date-main{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin:2px 0 10px;width:100%}
-.date-jewel-badge{position:relative;display:flex;align-items:center;justify-content:center}
-.date-jewel-ring{position:relative;display:inline-flex;align-items:center;justify-content:center;padding:4px 24px 5px;border-radius:14px;background:radial-gradient(circle at 50% 30%,rgba(255,244,208,.18) 0%,rgba(229,193,88,.06) 60%,rgba(18,18,24,.5) 100%);border:1px solid rgba(229,193,88,.4);box-shadow:0 4px 18px rgba(0,0,0,.5),0 0 18px rgba(229,193,88,.18),inset 0 0 12px rgba(229,193,88,.1)}
-.date-jewel-ring::before,.date-jewel-ring::after{content:"✦";position:absolute;font-size:.45rem;color:var(--color-gold);opacity:.75}
-.date-jewel-ring::before{left:7px}
-.date-jewel-ring::after{right:7px}
-.date-num{font-family:var(--font-serif);font-size:2.6rem;font-weight:700;line-height:1;letter-spacing:2px;background:var(--color-gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 10px rgba(229,193,88,.4))}
-.date-pedestal{display:flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-serif);margin-top:2px}
-.date-month{font-size:1.05rem;letter-spacing:3.5px;color:var(--color-gold-light);font-weight:600;text-transform:uppercase}
-.date-separator-flourish{font-size:.55rem;color:var(--color-gold);opacity:.85}
-.date-year{font-size:1.05rem;letter-spacing:3px;color:var(--color-gold);font-weight:600}
-.date-time{font-family:var(--font-sans);font-size:.72rem;font-weight:600;letter-spacing:1.5px;color:var(--color-gold-light);text-transform:uppercase;background:linear-gradient(135deg,rgba(229,193,88,.14) 0%,rgba(18,18,24,.6) 100%);border:1px solid rgba(229,193,88,.28);display:inline-flex;align-items:center;justify-content:center;padding:5px 16px;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,.4),inset 0 1px rgba(255,255,255,.08)}
-.date-time::before{content:"✧ ";color:var(--color-gold);margin-right:4px}
-.date-time::after{content:" ✧";color:var(--color-gold);margin-left:4px}
+/* Refined Date Display (1st · NOVEMBER · 2026) */
+.scratch-card-container{position:relative;width:100%;background:#121218a6;backdrop-filter:blur(14px);border:1px solid var(--color-glass-border);border-radius:18px;overflow:hidden;box-shadow:0 8px 30px #0006;user-select:none;-webkit-user-select:none}
+.date-time-card{background:transparent;border:none;padding:18px 16px;width:100%;text-align:center}
+.date-day{font-family:var(--font-serif);font-size:.78rem;letter-spacing:3.5px;color:var(--color-gold);margin-bottom:8px;font-weight:600;text-transform:uppercase}
+.date-main{display:flex;justify-content:center;align-items:center;gap:10px;margin:6px 0 10px}
+.date-num{font-family:var(--font-numeral);font-size:1.85rem;font-weight:700;color:var(--color-gold-light);line-height:1;letter-spacing:1px;font-variant-numeric:ordinal lining-nums tabular-nums}
+.date-dot{color:var(--color-gold);font-size:.75rem;opacity:.8}
+.date-month{font-family:var(--font-serif);font-size:1.05rem;letter-spacing:2px;color:var(--color-text-bright);font-weight:600}
+.date-year{font-family:var(--font-numeral);font-size:1.4rem;letter-spacing:1px;color:var(--color-text-bright);font-weight:700;line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.date-time{font-family:var(--font-sans);font-size:.72rem;font-weight:600;letter-spacing:1.5px;color:var(--color-gold-light);margin-top:10px;text-transform:uppercase;background:rgba(229,193,88,.08);border:1px solid rgba(229,193,88,.2);display:inline-block;padding:4px 14px;border-radius:20px}
 .countdown-num{font-family:var(--font-numeral);font-size:1.65rem;font-weight:700;color:var(--color-gold-light);line-height:1;font-variant-numeric:lining-nums tabular-nums}
 
 /* Greeting and Invitation Wording Styling */
