@@ -137,15 +137,30 @@
           <!-- Interactive Scratch-to-Reveal Date Card -->
           <div class="scratch-card-wrapper animate-element" style="--delay: 0.7s;">
             <div class="scratch-card-container" id="scratchContainer">
+              <!-- Corner Florets -->
+              <div class="card-corner corner-tl">✦</div>
+              <div class="card-corner corner-tr">✦</div>
+              <div class="card-corner corner-bl">✦</div>
+              <div class="card-corner corner-br">✦</div>
+
               <!-- Underneath Date Card -->
               <div class="date-time-card" id="dateTimeCard">
-                <div class="date-day" id="displayDay">SUNDAY</div>
+                <div class="date-day-row">
+                  <span class="day-line"></span>
+                  <span class="date-day" id="displayDay">SUNDAY</span>
+                  <span class="day-line right"></span>
+                </div>
                 <div class="date-main">
-                  <span class="date-num" id="displayDateNum">01</span>
-                  <span class="date-dot">•</span>
-                  <span class="date-month" id="displayMonth">NOVEMBER</span>
-                  <span class="date-dot">•</span>
-                  <span class="date-year" id="displayYear">2026</span>
+                  <div class="date-jewel-badge">
+                    <div class="date-jewel-ring">
+                      <span class="date-num" id="displayDateNum">01</span>
+                    </div>
+                  </div>
+                  <div class="date-pedestal">
+                    <span class="date-month" id="displayMonth">NOVEMBER</span>
+                    <span class="date-separator-flourish">◆</span>
+                    <span class="date-year" id="displayYear">2026</span>
+                  </div>
                 </div>
                 <div class="date-time" id="displayTime">MUHURTHAM: 9:00 AM - 10:30 AM</div>
               </div>
