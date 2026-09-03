@@ -37,10 +37,14 @@
   <!-- Performance Preload & Resource Hints -->
   <link rel="preload" as="image" id="preloadPoster" href="./assets/doors/2.png" fetchpriority="high">
   <link rel="preload" as="video" id="preloadVideo" href="./assets/doors/2.mp4" type="video/mp4">
+  <link rel="preload" as="audio" href="./assets/bgm.mp3">
   <script type="module" src="./main.js"></script>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body data-door-id="2" class="client-mode deliverable-mode">
+  <!-- Background Music Audio Element -->
+  <audio id="bgmAudio" src="./assets/bgm.mp3" preload="auto" loop playsinline webkit-playsinline></audio>
+
   <!-- Ambient Desktop Background -->
   <div class="ambient-backdrop" id="ambientBackdrop"></div>
 
