@@ -8,11 +8,21 @@
 /* Parents Details */
 .parent-info{font-family:var(--font-body);font-size:.95rem;font-style:italic;letter-spacing:.8px;color:var(--color-gold-light);margin-top:4px;margin-bottom:6px;opacity:.92}
 
-/* Itinerary Timeline Enhancements */
-.timeline-subtime{font-size:.62rem;font-weight:500;opacity:.8;display:block;margin-top:2px}
-.timeline-date-badge{display:inline-block;font-family:var(--font-sans);font-size:.62rem;font-weight:600;letter-spacing:1px;color:var(--color-gold);background:rgba(229,193,88,.12);border:1px solid rgba(229,193,88,.25);padding:2px 8px;border-radius:6px;margin-bottom:5px;text-transform:uppercase}
-.timeline-date-badge.muhurtham-badge{background:rgba(229,193,88,.22);border-color:var(--color-gold);color:var(--color-gold-light);box-shadow:0 0 10px rgba(229,193,88,.2)}
-.timeline-item.highlight-muhurtham{background:rgba(229,193,88,.08);border:1px solid rgba(229,193,88,.3);border-radius:12px;padding:10px 12px;margin:4px -4px}
+/* Event Itinerary Card & Time Styling */
+.itinerary-section{width:100%;max-width:340px;background:rgba(18,18,24,.65);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--color-glass-border);border-radius:20px;padding:18px 16px;margin-bottom:22px;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.itinerary-list{display:flex;flex-direction:column;gap:12px;width:100%}
+.itinerary-card{background:rgba(255,255,255,.03);border:1px solid rgba(229,193,88,.18);border-radius:14px;padding:12px 14px;text-align:left;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.itinerary-card:hover{border-color:rgba(229,193,88,.4);transform:translateY(-1px)}
+.itinerary-header-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.itinerary-date-badge{display:inline-flex;align-items:center;font-family:var(--font-sans);font-size:.62rem;font-weight:600;letter-spacing:1px;color:var(--color-gold);background:rgba(229,193,88,.1);border:1px solid rgba(229,193,88,.22);padding:2px 7px;border-radius:6px;text-transform:uppercase;white-space:nowrap}
+.itinerary-time-pill{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-sans);font-size:.68rem;font-weight:600;color:var(--color-gold-light);letter-spacing:.4px;white-space:nowrap}
+.itinerary-time-pill svg{color:var(--color-gold);opacity:.9;flex-shrink:0}
+.itinerary-title{font-family:var(--font-serif);font-size:.95rem;font-weight:700;color:var(--color-gold-light);letter-spacing:1.2px;margin-bottom:3px;text-transform:uppercase}
+.itinerary-desc{font-family:var(--font-body);font-size:.88rem;color:var(--color-text-muted);line-height:1.35;margin:0}
+.itinerary-card.highlight-muhurtham{background:linear-gradient(135deg,rgba(229,193,88,.14) 0%,rgba(26,22,14,.8) 100%);border:1px solid rgba(229,193,88,.45);box-shadow:0 4px 20px rgba(229,193,88,.15),inset 0 0 15px rgba(229,193,88,.05)}
+.itinerary-card.highlight-muhurtham .itinerary-date-badge.muhurtham-badge{background:var(--color-gold-gradient);color:#0a0a0c;font-weight:700;border:none;box-shadow:0 2px 6px rgba(229,193,88,.3)}
+.itinerary-card.highlight-muhurtham .itinerary-time-pill.muhurtham-time{color:#fff6d5;font-weight:700}
+.itinerary-card.highlight-muhurtham .itinerary-title{background:var(--color-gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6))}
 .map-btn-link{text-decoration:none}
 
 /* Couple Portrait Frame (Below Event Itinerary) */
@@ -22,5 +32,32 @@
 .couple-portrait-img{width:100%;height:auto;max-height:430px;object-fit:cover;object-position:center top;border-radius:16px;display:block;filter:contrast(1.02) brightness(.98)}
 .photo-caption-overlay{position:absolute;bottom:4px;left:4px;right:4px;padding:22px 14px 10px;background:linear-gradient(180deg,transparent 0%,rgba(8,8,12,.88) 85%);border-radius:0 0 16px 16px;text-align:center;pointer-events:none}
 .photo-caption-names{font-family:var(--font-heading);font-size:1.05rem;letter-spacing:2px;color:var(--color-gold-light);text-shadow:0 2px 10px rgba(0,0,0,.9);font-weight:600}
+
+/* Refined Date Display & Countdown Numbers */
+.date-time-card{background:transparent;border:none;padding:18px 16px;width:100%;text-align:center}
+.date-day{font-family:var(--font-serif);font-size:.78rem;letter-spacing:3.5px;color:var(--color-gold);margin-bottom:6px;font-weight:600;text-transform:uppercase}
+.date-main{display:flex;justify-content:center;align-items:center;gap:10px;margin:6px 0 10px}
+.date-num{font-family:"Cormorant Garamond","Cinzel",serif;font-size:2.4rem;font-weight:700;color:var(--color-gold-light);line-height:1;letter-spacing:1px;font-variant-numeric:tabular-nums}
+.date-dot{color:var(--color-gold);font-size:.7rem;opacity:.7}
+.date-month,.date-year{font-family:var(--font-serif);font-size:1.05rem;letter-spacing:2px;color:var(--color-text-bright);font-weight:600}
+.date-time{font-family:var(--font-sans);font-size:.72rem;font-weight:600;letter-spacing:1.5px;color:var(--color-gold-light);margin-top:8px;text-transform:uppercase;background:rgba(229,193,88,.08);border:1px solid rgba(229,193,88,.2);display:inline-block;padding:4px 14px;border-radius:20px}
+.countdown-num{font-family:"Cormorant Garamond","Cinzel",serif;font-size:1.65rem;font-weight:700;color:var(--color-gold-light);line-height:1;font-variant-numeric:tabular-nums}
+
+/* Greeting and Invitation Wording Styling */
+.greeting-text{font-family:var(--font-serif);font-size:.76rem;letter-spacing:2px;color:var(--color-gold-light);font-weight:500;margin-bottom:16px;line-height:1.5;max-width:320px}
+.invitation-tagline{font-family:var(--font-body);font-size:.95rem;letter-spacing:.8px;line-height:1.55;color:var(--color-gold-light);opacity:.92;max-width:320px;margin-bottom:20px}
+
+/* Couple Names Sizing & Mobile Responsiveness */
+.couple-names-block{margin:10px 0 20px;width:100%;max-width:100%;display:flex;flex-direction:column;align-items:center}
+.groom-name,.bride-name{font-family:var(--font-heading);font-size:clamp(1.4rem,5.2vw,2.1rem);font-weight:400;line-height:1.2;background:var(--color-gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 15px rgba(0,0,0,.8));letter-spacing:.8px;white-space:nowrap;max-width:100%;text-align:center;padding:0 4px}
+
+@media (max-width: 600px){
+  .content-scrollable{padding:36px 14px}
+  .groom-name,.bride-name{font-size:clamp(1.22rem,4.6vw,1.65rem);letter-spacing:.4px}
+  .parent-info{font-size:.88rem}
+}
+
+
+
 
 

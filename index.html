@@ -114,7 +114,7 @@
           </div>
 
           <!-- Families & Greeting -->
-          <p class="greeting-text animate-element" style="--delay: 0.2s;" id="displayGreeting">WE INVITE YOU TO CELEBRATE THE WEDDING OF</p>
+          <p class="greeting-text animate-element" style="--delay: 0.2s;" id="displayGreeting">WITH THE DIVINE BLESSINGS OF OUR PARENTS AND ELDERS</p>
 
           <!-- Groom & Bride Names -->
           <div class="couple-names-block animate-element" style="--delay: 0.35s;">
@@ -129,7 +129,7 @@
 
           <!-- Announcement -->
           <p class="invitation-tagline animate-element" style="--delay: 0.5s;" id="displayTagline">
-            REQUEST THE HONOR OF YOUR PRESENCE AT THE AUSPICIOUS OCCASION OF THEIR WEDDING CEREMONY
+            We cordially invite you and your family to grace the auspicious occasion of our wedding ceremony.
           </p>
 
           <div class="gold-separator animate-element" style="--delay: 0.6s;"></div>
@@ -141,8 +141,10 @@
               <div class="date-time-card" id="dateTimeCard">
                 <div class="date-day" id="displayDay">SUNDAY</div>
                 <div class="date-main">
-                  <span class="date-month" id="displayMonth">NOVEMBER</span>
                   <span class="date-num" id="displayDateNum">01</span>
+                  <span class="date-dot">•</span>
+                  <span class="date-month" id="displayMonth">NOVEMBER</span>
+                  <span class="date-dot">•</span>
                   <span class="date-year" id="displayYear">2026</span>
                 </div>
                 <div class="date-time" id="displayTime">MUHURTHAM: 9:00 AM - 10:30 AM</div>
@@ -194,33 +196,44 @@
           <!-- Event Itinerary Timeline Section -->
           <div class="itinerary-section animate-element" style="--delay: 1.0s;">
             <div class="section-title">EVENT ITINERARY</div>
-            <div class="timeline-wrapper">
-              <div class="timeline-item">
-                <div class="timeline-time">10:30 AM<br><span class="timeline-subtime">- 11:30 AM</span></div>
-                <div class="timeline-dot">◆</div>
-                <div class="timeline-content">
-                  <div class="timeline-date-badge">31.10.2026 • Saturday</div>
-                  <h4>Nichayathartham</h4>
-                  <p>Auspicious Engagement Ceremony</p>
+            <div class="itinerary-list">
+              <!-- Event 1: Nichayathartham -->
+              <div class="itinerary-card">
+                <div class="itinerary-header-row">
+                  <span class="itinerary-date-badge">31.10.2026 • SATURDAY</span>
+                  <span class="itinerary-time-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    10:30 AM – 11:30 AM
+                  </span>
                 </div>
+                <h4 class="itinerary-title">NICHAYATHARTHAM</h4>
+                <p class="itinerary-desc">Auspicious Engagement Ceremony</p>
               </div>
-              <div class="timeline-item">
-                <div class="timeline-time">6:30 PM<br><span class="timeline-subtime">Onwards</span></div>
-                <div class="timeline-dot">◆</div>
-                <div class="timeline-content">
-                  <div class="timeline-date-badge">31.10.2026 • Saturday</div>
-                  <h4>Reception</h4>
-                  <p>Evening Celebrations &amp; Festive Dinner</p>
+
+              <!-- Event 2: Reception -->
+              <div class="itinerary-card">
+                <div class="itinerary-header-row">
+                  <span class="itinerary-date-badge">31.10.2026 • SATURDAY</span>
+                  <span class="itinerary-time-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    6:30 PM ONWARDS
+                  </span>
                 </div>
+                <h4 class="itinerary-title">RECEPTION</h4>
+                <p class="itinerary-desc">Evening Celebrations &amp; Festive Dinner</p>
               </div>
-              <div class="timeline-item highlight-muhurtham">
-                <div class="timeline-time">9:00 AM<br><span class="timeline-subtime">- 10:30 AM</span></div>
-                <div class="timeline-dot">◆</div>
-                <div class="timeline-content">
-                  <div class="timeline-date-badge muhurtham-badge">01.11.2026 • Sunday</div>
-                  <h4>Muhurtham</h4>
-                  <p>Sri Ganesh Mahal, Kalapet Pondicherry</p>
+
+              <!-- Event 3: Muhurtham (Highlighted Main Event) -->
+              <div class="itinerary-card highlight-muhurtham">
+                <div class="itinerary-header-row">
+                  <span class="itinerary-date-badge muhurtham-badge">01.11.2026 • SUNDAY</span>
+                  <span class="itinerary-time-pill muhurtham-time">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    9:00 AM – 10:30 AM
+                  </span>
                 </div>
+                <h4 class="itinerary-title">MUHURTHAM</h4>
+                <p class="itinerary-desc">Sri Ganesh Mahal, Kalapet Pondicherry</p>
               </div>
             </div>
           </div>
