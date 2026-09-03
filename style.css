@@ -30,7 +30,7 @@
 .photo-caption-overlay{position:absolute;bottom:4px;left:4px;right:4px;padding:22px 14px 10px;background:linear-gradient(180deg,transparent 0%,rgba(8,8,12,.88) 85%);border-radius:0 0 16px 16px;text-align:center;pointer-events:none}
 .photo-caption-names{font-family:var(--font-heading);font-size:1.05rem;letter-spacing:2px;color:var(--color-gold-light);text-shadow:0 2px 10px rgba(0,0,0,.9);font-weight:600}
 
-/* Refined Date Display (1st · NOVEMBER · 2026) */
+/* Refined Date Display (1st November 2026) */
 .scratch-card-container{position:relative;width:100%;background:#121218a6;backdrop-filter:blur(14px);border:1px solid var(--color-glass-border);border-radius:18px;overflow:hidden;box-shadow:0 8px 30px #0006;user-select:none;-webkit-user-select:none}
 .date-time-card{background:transparent;border:none;padding:18px 16px;width:100%;text-align:center}
 .date-day{font-family:var(--font-serif);font-size:.78rem;letter-spacing:3.5px;color:var(--color-gold);margin-bottom:8px;font-weight:600;text-transform:uppercase}
